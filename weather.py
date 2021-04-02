@@ -30,7 +30,7 @@ class station:
         self.name='Idar-Oberstein'
         self.height=376
         self.coords='49.6927°N 7.3264°E'
-        self.__defaultFlightUrl='https://github.com/ingodahn/sageutils/blob/master/sampleIO02385.zip'
+        self.__defaultFlightUrl='https://raw.githubusercontent.com/ingodahn/sageutils/master/sampleIO02385.zip'
 
     def description(self):
         return 'Weather station '+self.name+' is situated at '+self.coords+' at a height of '+str(self.height)+' m.'
