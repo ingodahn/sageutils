@@ -42,11 +42,11 @@ class station:
         return True
     def getFlight(self,id='default'):
         if id == 'default':
-            dataRaw=pd.read_csv(self.__defaultFlightUrl,';').values
+            dataRaw=pd.read_csv(self.__defaultFlightUrl,sep=';').values
         else:
             url=self.__recentFlightsUrl()
             print("Loading data from German Weather Service. Please, be patient.")
-            dataVRemote=pd.read_csv(url,';').values
+            dataVRemote=pd.read_csv(url,sep=';').values
             flights=len(set([d[1] for d in dataVRemote]))
             print(len(dataVRemote),"data points from",flights,"flights between",dateString(dataVRemote[0][1]),"and",dateString(dataVRemote[len(dataVRemote)-1][1])," loaded.")
             if id == 'random':
